@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 # Step 4: Install the app dependencies inside the container
-RUN npm install
+RUN npm install -g npm@latest && npm install
 
 # Step 5: Copy the rest of the application files to the container
 COPY . .
